@@ -1,2 +1,14 @@
-# Password-generator-system-
-A Password Generator System creates a random password using letters, numbers, and special characters based on the length entered by the user.
+import random
+import string
+
+print("=== Password Generator System ===")
+
+length = int(input("Enter password length: "))
+
+characters = string.ascii_letters + string.digits + string.punctuation
+password = ""
+
+for i in range(length):
+    password += random.choice(characters)
+
+print("Generated Password:", password)
